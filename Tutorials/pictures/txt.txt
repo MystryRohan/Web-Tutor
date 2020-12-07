@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeSeeker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./pictures/IMG_20200707_124135.png" alt="logo" />
+          <h2>CodeSeeker</h2>
+        </div>
+        <ul class="links">
+          <li><a href="">Skill 1</a></li>
+          <li><a href="">Skill 2</a></li>
+          <li class="drop">Ultimate</li>
+          <div class="drop-links">
+            <a href="./Tutorials/wallpapers.html">Image Gallary</a>
+            <a href="#">Tour Gide</a>
+            <a href="#">Hospitals</a>
+          </div>
+          <li class="hamburger">
+            <div class="hamb"></div>
+            <div class="hamb"></div>
+            <div class="hamb"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="subcontent">
+        <h1>Learn WEB-DEV</h1>
+        <h4>The Best Ad-free Site for Learning HTML, CSS and JavaScript!</h4>
+        <p>
+          From Complete beginer To a Full Stack Developer.<br />Start Now!<br />
+          <br />Skill 1 >>> HTML<br />Skill 2 >>> CSS & JS<br />Ultimate >>>
+          Complete WebPage<br />
+        </p>
+      </div>
+      <img src="./pictures/Screen-Complete.png" alt="" />
+    </div>
+    <script src="appp.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+// Animation Effect
+const appLogo1 = document.querySelector("#html");
+const appLogo2 = document.querySelector("#css");
+const appLogo3 = document.querySelector("#js");
+const container = document.querySelector(".picture");
+
+container.addEventListener("mousemove", (e) => {
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 10;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 10;
+
+  appLogo1.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  appLogo2.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  appLogo3.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
+container.addEventListener("mouseenter", (e) => {
+  appLogo1.style.transition = "none";
+  appLogo2.style.transition = "none";
+  appLogo3.style.transition = "none";
+});
+
+container.addEventListener("mouseleave", (e) => {
+  appLogo1.style.transition = "all 0.5s ease";
+  appLogo2.style.transition = "all 0.5s ease";
+  appLogo3.style.transition = "all 0.5s ease";
+  appLogo1.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  appLogo2.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  appLogo3.style.transform = `rotateY(0deg) rotateX(0deg)`;
+});
