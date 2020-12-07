@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: rgb(34, 34, 34);
+}
+nav {
+  z-index: 1;
+  position: fixed;
+  min-height: 8vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aqua;
+  padding: 0px 10px;
+}
+nav img {
+  align-items: center;
+  height: 6vh;
+  width: 6vh;
+}
+nav img.home {
+  position: absolute;
+  left: 75%;
+}
+.srch-img {
+  height: 3vh;
+  width: 3vh;
+}
+input {
+  height: 0.64cm;
+}
+/* Defaut */
+/* .container {
+  margin: 0px 10px;
+  padding-top: 8vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.container img {
+  width: 25rem;
+  height: 20rem;
+  object-fit: cover;
+  transition: all 0.3s ease-in;
+} */
+
+/* Ninja */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0px 10px;
+  grid-gap: 20px;
+  padding-top: 8vh;
+}
+.gridwrap {
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  position: relative;
+}
+.gridwrap img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  position: absolute;
+  top: 0%;
+  left: -25%;
+  object-fit: contain;
+  transition: all 0.3s ease-in;
+}
+/* .container {
+  margin-top: 8vh;
+  width: 100%;
+  float: left;
+  height: auto;
+  padding: 0 10px;
+}
+.gridwrap {
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  padding: 5px 5px;
+}
+.gridwrap img {
+  width: 100%;
+  transition: all 0.3s ease-in;
+} */
+.container img:hover {
+  /* -webkit-transform: scale(1.2); */
+  transform: scale(1.2);
+}
+.footer {
+  display: flex;
+  width: 100%;
+  min-height: 12vh;
+  background-color: inherit;
+  justify-content: center;
+  align-items: center;
+}
+.footer a {
+  text-decoration: none;
+  color: darkcyan;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+  }
+  .container img {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .container img {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container img {
+    padding: 5px;
+  }
+}
+.filter {
+  display: none;
+}
+.filter-active {
+  display: block;
+}
