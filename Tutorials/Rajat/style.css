@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+tbody {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+}
+.content {
+  display: flex;
+  justify-content: center;
+}
+th {
+  border: 2px solid black;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+tr,
+td,
+table {
+  border: 1px solid black;
+}
+td:hover {
+  transition-property: background ease-in-out;
+  background-color: crimson;
+  color: black;
+  transition-duration: 0.3s;
+}
+a:hover {
+  transition: background ease-in-out 0.3s;
+  background-color: crimson;
+  color: black;
+}
+a {
+  text-decoration: none;
+  color: red;
+  font-weight: 550;
+  font-size: 1.4rem;
+}
