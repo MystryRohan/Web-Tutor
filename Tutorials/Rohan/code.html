@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code</title>
+    <style>
+        h1{margin-left: 10px;font-family: 'Courier New', Courier, monospace;}
+        img{width: 40%;height: 40%;filter: drop-shadow(5px 0px 5px black);}
+        .code{display: flex;width: 90%;justify-content: space-between;background-color: lightgray;border: black 1px solid;}
+        .style{display: flex;width: 90%;justify-content: space-between;background-color: lightgreen;border: 1px solid black;}
+    </style>
+  </head>
+  <body style="margin-left: 10%;">
+    <div style="display:flex;margin: 2rem;width: 70%;justify-content: space-between;align-items: center;" class="legends">
+       <div style="display: flex;align-items: center;"><div style="background-color: lightgrey;width: 4rem; height: 4rem;box-shadow: 0px 5px 5px black;"></div><h1>HTML</h1></div>
+       <div style="display: flex;align-items: center;"><div style="background-color: lightgreen;width: 4rem; height: 4rem;box-shadow: 0px 5px 5px black;"></div><h1>CSS</h1></div>
+    </div>
+    <div class="code">
+      <pre>
+
+            
+         &lt;div class='main'&gt;
+             &lt;div class='grid'&gt;
+                 &lt;img src='sample.png'&gt;
+             &lt;/div&gt;
+             &lt;div class='grid'&gt;
+                 &lt;img src='sample.png'&gt;
+             &lt;/div&gt;
+             &lt;div class='grid'&gt;
+                 &lt;img src='sample.png'&gt;
+             &lt;/div&gt;
+         &lt;/div&gt;
+      </pre>
+      <img src="img1.png" alt="" />
+    </div>
+    <div class="style">
+      <pre>
+
+
+
+
+
+            .main{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+                padding-top: 8vh;
+            }
+        </pre>
+        <img src="img2.png" alt="">
+    </div>
+    <div class="style">
+        <pre>
+
+
+
+
+            .grid {
+                overflow: hidden;
+                height: 0;
+                padding: 50% 0;
+                position: relative;
+            }
+          </pre>
+          <img src="img3.png" alt="">
+      </div>
+      <div class="style">
+        <pre>
+
+
+
+            .grid img {
+                min-width: 100%;
+                min-height: 100%;
+                max-width: 150%;
+                position: absolute;
+                top: 0%;
+                left: -25%;
+                object-fit: contain;
+            }    
+          </pre>
+          <img src="img4.png" alt="">
+      </div>      
+  </div>
+  </body>
+  &lt;&gt;
+</html>
